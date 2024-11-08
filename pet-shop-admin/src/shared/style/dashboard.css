@@ -1,0 +1,18 @@
+body {
+  overflow: hidden;
+}
+.add-product-transition {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px); /* Adjust this value for the slide effect */
+}
+
+.add-product-transition-enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.add-product-transition-exit {
+  opacity: 0;
+  transform: translateY(-20px);
+}
