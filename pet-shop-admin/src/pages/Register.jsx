@@ -88,7 +88,7 @@ const Register = () => {
           <Link to="..">
             <IoCloseOutline
               size={40}
-              className="border-[1px] rounded-full bg-[#073273] text-white cursor-pointer"
+              className="border-[1px] rounded-full bg-[#a2292e] text-white cursor-pointer"
             />
           </Link>
         </div>
@@ -146,7 +146,7 @@ const Register = () => {
 
           <button
             type="submit"
-            className="bg-[#073273] text-white text-base py-2 my-3"
+            className="bg-[#a2292e] active:bg-slate-200 text-white active:text-black rounded-md text-base py-2 my-3"
           >
             Register
           </button>

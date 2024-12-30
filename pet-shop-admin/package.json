@@ -11,7 +11,12 @@
   },
   "dependencies": {
     "@zxing/library": "^0.21.3",
+    "cors": "^2.8.5",
+    "escpos": "^3.0.0-alpha.6",
+    "escpos-usb": "^0.0.1-alpha.0",
+    "express": "^4.21.1",
     "firebase": "^11.0.1",
+    "googleapis": "^144.0.0",
     "jsbarcode": "^3.11.6",
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
@@ -23,7 +28,8 @@
     "react-router-dom": "^6.27.0",
     "react-toastify": "^10.0.6",
     "react-webcam": "^7.2.0",
-    "recharts": "^2.13.1"
+    "recharts": "^2.13.1",
+    "usb": "^2.14.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

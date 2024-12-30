@@ -8,7 +8,7 @@ import {
 } from "firebase/firestore";
 import { ref, getDownloadURL, deleteObject } from "firebase/storage";
 import { db, storage } from "../db/firebase";
-import { IoSearchOutline } from "react-icons/io5";
+import { IoSearchOutline, IoCloseSharp } from "react-icons/io5";
 import { MdOutlinePictureAsPdf } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteForever } from "react-icons/md";
@@ -222,6 +222,10 @@ const Category = () => {
     setFilteredCategories(results);
   };
 
+  const clearInput = (e) => {
+    setSearchTerm("");
+  };
+
   return (
     <div className="w-[80%] text-white px-5 py-7 ">
       <div className="flex flex-col gap-5">
@@ -233,11 +237,19 @@ const Category = () => {
             onSubmit={handleSearch}
             className="flex bg-slate-300 rounded-3xl px-3 py-2"
           >
+            {searchTerm && (
+              <IoCloseSharp
+                size={24}
+                onClick={clearInput}
+                className="cursor-pointer text-black"
+              />
+            )}
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search brand..."
               className="w-[90%] text-black bg-transparent outline-none"
               value={searchTerm}
+              onClick={clearInput}
               onChange={(e) => setSearchTerm(e.target.value)}
               onFocus={() => setIsScannerActive(true)} // Activate scanner when input is focused
               onBlur={() => setIsScannerActive(false)} // Deactivate scanner when input is blurred

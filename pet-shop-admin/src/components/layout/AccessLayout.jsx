@@ -5,7 +5,7 @@ import "../../shared/style/dashboard.css";
 
 const AccessLayout = () => {
   return (
-    <div className="w-full min-h-screen bg-teal-700">
+    <div className="w-full min-h-screen bg-[#a2292e]">
       <div className="flex flex-row">
         {/* left box */}
         <LeftSideBar />

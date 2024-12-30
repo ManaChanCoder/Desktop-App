@@ -14,7 +14,7 @@ import {
   uploadBytes,
 } from "firebase/storage";
 import { db, storage } from "../db/firebase";
-import { IoSearchOutline } from "react-icons/io5";
+import { IoSearchOutline, IoCloseSharp } from "react-icons/io5";
 import { FaBarcode } from "react-icons/fa6";
 import { MdOutlinePictureAsPdf } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
@@ -483,6 +483,10 @@ const Product = () => {
     e.preventDefault(); // Prevent form submission
   };
 
+  const clearInput = () => {
+    setSearchTerm("");
+  };
+
   return (
     <div className="w-[80%] text-white px-5 py-7 relative">
       <div className="flex flex-col gap-5">
@@ -494,9 +498,16 @@ const Product = () => {
             onSubmit={handleSubmit}
             className="flex bg-slate-300 rounded-3xl px-3 py-2"
           >
+            {searchTerm && (
+              <IoCloseSharp
+                size={24}
+                onClick={clearInput}
+                className="cursor-pointer text-black"
+              />
+            )}
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search or Scanner..."
               className="w-[90%] text-black bg-transparent outline-none"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}

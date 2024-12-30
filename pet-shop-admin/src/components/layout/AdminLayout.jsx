@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const AdminLayout = () => {
   return (
-    <div>
+    <div className="bg-[#f2f2f2]">
       <Outlet />
     </div>
   );
